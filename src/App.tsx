@@ -1,11 +1,23 @@
-import { useState } from 'react'
+import {lazy, Suspense} from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Layout from './components/Layout/Layout';
+
+const Home: React.FC = lazy(() => import('./components/Home'));
 
 function App() {
 
   return (
-    <div className="App">
-      
-    </div>
+    <>
+      <Router>
+        <Layout>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </Suspense>
+        </Layout>
+      </Router>
+    </>
   )
 }
 
