@@ -13,7 +13,47 @@ const Layout:React.FC<PropsWithChildren<LayoutProps>> = ({children}) =>  {
     <>
         <Navbar />
             {children}
-        <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer /><Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
+            <Footer />
     </>
   )
 }
