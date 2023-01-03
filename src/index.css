@@ -12,3 +12,18 @@ body {
   background-attachment: fixed;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(./assets/home-bg.jpg);
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+  ::-webkit-scrollbar-track {
+  background: #c770f000; 
+}
+  ::-webkit-scrollbar-thumb {
+  background:#C770F0; 
+    border-radius:10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  
+  background: #c770f0c3; 
+} 
