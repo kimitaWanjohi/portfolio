@@ -1,15 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 
-const customTheme = {
-    breakpoints: {
-      values: {
-        xs: 0,
-        sm: 600,
-        md: 1000,
-        lg: 1200,
-        xl: 1920
-      }
-    },
+export const theme = createTheme({
     components: {
       MuiButton: {
         defaultProps: {
@@ -163,19 +154,8 @@ const customTheme = {
     ],palette: {
         mode: 'dark',
         background: {
-            default: '#111827',
+            default: '#14141b',
             paper: '#0b0f19'
-        },
-        neutral: {
-            100: '#F3F4F6',
-            200: '#E5E7EB',
-            300: '#D1D5DB',
-            400: '#9CA3AF',
-            500: '#6B7280',
-            600: '#4B5563',
-            700: '#374151',
-            800: '#1F2937',
-            900: '#111827'
         },
         action: {
             active: '#6B7280',
@@ -193,9 +173,9 @@ const customTheme = {
             contrastText: '#FFFFFF'
         },
         secondary: {
-            main: '#10B981',
+            main: '#C770F0',
             light: '#3FC79A',
-            dark: '#0B815A',
+            dark: '#462B66',
             contrastText: '#FFFFFF'
         },
         success: {
@@ -294,6 +274,4 @@ const customTheme = {
         lineHeight: 1.375
       }
     }
-  };
-
-export const theme =  createTheme(customTheme);
+  });
