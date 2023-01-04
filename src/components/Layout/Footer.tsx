@@ -28,12 +28,21 @@ function Footer() {
       left: 0,
       maxHeight: '120px',
     }}>
-      <Typography variant="h6" align="center">
+      <Typography variant="h6" align="center" sx={{
+        fontWeight: 500,
+        fontSize: '1.2rem'
+      }}>
         Designed and Developed by Kimita
       </Typography>
-      <Typography variant="h6" component='div' align="center">
+      <Typography variant="h6" component='div' align="center" sx={{
+        fontWeight: 500,
+        fontSize: '1.2rem'
+      }}>
         Copyright &copy; {new Date().getFullYear()} {" "}
-        <Typography variant="h6" component='span' color="secondary">
+        <Typography variant="h6" component='span' color="secondary" sx={{
+          fontWeight: 500,
+          fontSize: '1.2rem'
+        }}>
           KW
         </Typography>
       </Typography>
