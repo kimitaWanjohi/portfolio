@@ -73,6 +73,8 @@ const Navbar: React.FC = () => {
                 elevation: trigger ? 4 : 0,
                 transition: "all 0.3s ease-in-out",
                 zIndex: theme.zIndex.drawer + 1,
+                borderBottomRightRadius: 20,
+                borderBottomLeftRadius: 20,
             }}  
         >
             <Toolbar>
