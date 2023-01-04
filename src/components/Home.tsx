@@ -1,10 +1,12 @@
 import React from 'react';
-import Layout from './Layout/Layout';
+import HeroSection from './Home/HeroSection';
 
 function Home() {
 
   return (
-    <div> Home </div>
+    <>
+      <HeroSection />
+    </>
   )
 }
 
