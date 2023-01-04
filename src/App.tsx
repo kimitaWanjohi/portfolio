@@ -8,7 +8,7 @@ const About: React.FC = lazy(() => import('./components/About'));
 function App() {
 
   return (
-    <>
+    <div className='background'>
       <Router>
         <Layout>
           <Suspense fallback={<div>Loading...</div>}>
@@ -19,7 +19,7 @@ function App() {
           </Suspense>
         </Layout>
       </Router>
-    </>
+    </div>
   )
 }
 

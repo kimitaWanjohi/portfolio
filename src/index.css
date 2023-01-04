@@ -4,13 +4,12 @@
   box-sizing: border-box;
 }
 
-body {
+.background {
   font-family: 'Roboto', sans-serif;
-  background-size: fill;
+  background-size: cover !important;                     
   background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background: linear-gradient(80deg, rgba(0, 0, 0, 0.5), rgb(41, 2, 38, 0.8)), url(./assets/home-bg.jpg);
+  background-position: center center;
+  background-image: linear-gradient(to bottom left,hsla(0,3%,6%,.678),rgba(12,10,22,.863)),url(./assets/home-bg.jpg);
 }
 
 ::-webkit-scrollbar {
