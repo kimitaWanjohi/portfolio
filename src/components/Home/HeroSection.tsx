@@ -3,36 +3,46 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import IconButton from '@mui/material/IconButton';
-import { useTheme } from '@mui/material/styles';
+import { useTheme, styled } from '@mui/material/styles';
+import Button from '@mui/material/Button';
 
 import { TypeAnimation } from 'react-type-animation';
 
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import EmailIcon from '@mui/icons-material/Email';
+import { useNavigate } from 'react-router-dom';
 
 import HomeMain from '../../assets/home-main.svg';
 
+const RoundPillButton = styled(Button)(({ theme }) => ({
+    borderRadius: '50px',
+    padding: theme.spacing(1, 3),
+    textTransform: 'none',
+    fontWeight: 'bold',
+    fontSize: '1rem',
+    color: theme.palette.secondary.light,
+    backgroundColor: 'transparent',
+    border: `2px solid ${theme.palette.secondary}`,
+}));
+
+
 const HeroSection: React.FC = () => {
+
+    const navigate = useNavigate();
     const theme = useTheme();
     return (
         <>
-            <Grid container spacing={2}>
-                <Grid item xs={12} md={6}>
+            <Grid container>
+                <Grid item xs={12} md={7}>
                     <Box sx={{
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'center',
                         alignItems: 'flex-start',
-                        height: '60%',
-                        color: 'secondary.main',
+                        height: '450px',
                     }}>
                         <Typography variant="h3" component="div" sx={{color: 'white'}}>
                             Hi there
                             <Typography variant="h2" gutterBottom color="secondary">
-                                {' '}I'm{' '} Kimita Wanjohi
+                                I'm Kimita Wanjohi
                             </Typography>
 
                             <TypeAnimation
@@ -50,14 +60,14 @@ const HeroSection: React.FC = () => {
                         </Typography>
                     </Box>
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} md={5}>
                     <Box sx={{
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        height: '60%',
+                        height: '450px',
                     }}>
-                        <img src={HomeMain} alt="Home Main" style={{width: '100%'}} />
+                        <img src={HomeMain} alt="Home Main" style={{width: '100%', maxHeight: '450px'}} />
                     </Box>
                 </Grid>
                 <Grid item xs={12}>
@@ -65,19 +75,11 @@ const HeroSection: React.FC = () => {
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
+                        background: 'transparent',
                     }}>
-                        <IconButton href="https://github.com/kimitawanjohi" target="_blank" sx={{color: 'white'}}>
-                            <GitHubIcon />
-                        </IconButton>
-                        <IconButton href="https://www.linkedin.com/in/kimitawanjohi/" target="_blank" sx={{color: 'white'}}>
-                            <LinkedInIcon />
-                        </IconButton>
-                        <IconButton href="https://twitter.com/kimitaw" target="_blank" sx={{color: 'white'}}>
-                            <TwitterIcon />
-                        </IconButton>
-                        <IconButton href="mailto:kimitawanjohi7923@gmail.com" target="_blank" sx={{color: 'white'}}>
-                            <EmailIcon />
-                        </IconButton>
+                        <RoundPillButton variant="outlined" onClick={() => navigate('/about')}>
+                            About Me
+                        </RoundPillButton>
                     </Box>
                 </Grid>
             </Grid>

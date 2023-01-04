@@ -26,6 +26,7 @@ function Footer() {
       bottom: 0,
       width: '100%',
       left: 0,
+      maxHeight: '120px',
     }}>
       <Typography variant="h6" align="center">
         Designed and Developed by Kimita
