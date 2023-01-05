@@ -3,41 +3,29 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import { useTheme, styled } from '@mui/material/styles';
-import Button from '@mui/material/Button';
+import { useTheme } from '@mui/material/styles';
 
 import { TypeAnimation } from 'react-type-animation';
 
-import { useNavigate } from 'react-router-dom';
-
 import HomeMain from '../../assets/home-main.svg';
-
-const RoundPillButton = styled(Button)(({ theme }) => ({
-    borderRadius: '50px',
-    padding: theme.spacing(1, 3),
-    textTransform: 'none',
-    fontWeight: 'bold',
-    fontSize: '1rem',
-    color: theme.palette.secondary.light,
-    backgroundColor: 'transparent',
-    border: `2px solid ${theme.palette.secondary}`,
-}));
 
 
 const HeroSection: React.FC = () => {
 
-    const navigate = useNavigate();
     const theme = useTheme();
     return (
-        <>
+        <Box sx={{
+            height: {xs: 'auto', md: '100vh'},
+            mb: theme.spacing(4)
+        }}>
             <Grid container>
-                <Grid item xs={12} md={7}>
+                <Grid item xs={12} sm={7}>
                     <Box sx={{
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'center',
                         alignItems: 'flex-start',
-                        height: '450px',
+                        height: '100%'
                     }}>
                         <Typography variant="h3" component="div" sx={{color: 'white'}}>
                             Hi there
@@ -60,30 +48,18 @@ const HeroSection: React.FC = () => {
                         </Typography>
                     </Box>
                 </Grid>
-                <Grid item xs={12} md={5}>
+                <Grid item xs={12} sm={5}>
                     <Box sx={{
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        height: '450px',
+                        height: '100%'
                     }}>
-                        <img src={HomeMain} alt="Home Main" style={{width: '100%', maxHeight: '450px'}} />
-                    </Box>
-                </Grid>
-                <Grid item xs={12}>
-                    <Box sx={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        background: 'transparent',
-                    }}>
-                        <RoundPillButton variant="outlined" onClick={() => navigate('/about')}>
-                            About Me
-                        </RoundPillButton>
+                        <img src={HomeMain} alt="Home Main" style={{width: '100%'}} />
                     </Box>
                 </Grid>
             </Grid>
-        </>
+        </Box>
     )
 }
 
