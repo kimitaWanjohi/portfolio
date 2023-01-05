@@ -9,6 +9,7 @@ function App() {
 
   return (
     <div className='background'>
+      <div className='background__overlay'>
       <Router>
         <Layout>
           <Suspense fallback={<div>Loading...</div>}>
@@ -19,6 +20,7 @@ function App() {
           </Suspense>
         </Layout>
       </Router>
+      </div>
     </div>
   )
 }

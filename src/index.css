@@ -9,7 +9,15 @@
   background-size: cover !important;                     
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: linear-gradient( to bottom left,hsla(0,3%,6%,.6),rgba(12,10,22,.8)),url(./assets/home-bg.jpg);
+  background-image: url(./assets/home-bg.jpg);
+}
+
+.background__overlay{
+  backdrop-filter: blur(5px);
+  background-size: cover !important;                     
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: linear-gradient( 45deg,hsla(0,3%,6%,.9),rgba(12,10,22,.8));
 }
 
 ::-webkit-scrollbar {
