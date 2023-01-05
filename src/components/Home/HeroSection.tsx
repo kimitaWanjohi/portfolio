@@ -15,7 +15,7 @@ const HeroSection: React.FC = () => {
     const theme = useTheme();
     return (
         <Box sx={{
-            height: {xs: 'auto', md: '100vh'},
+            height: {xs: 'auto', sm : '100vh'},
             mb: theme.spacing(4),
             px: theme.spacing(4)
         }}>

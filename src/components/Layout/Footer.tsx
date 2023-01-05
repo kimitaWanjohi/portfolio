@@ -28,20 +28,20 @@ function Footer() {
       left: 0,
       maxHeight: '120px',
     }}>
-      <Typography variant="h6" align="center" sx={{
-        fontWeight: 500,
-        fontSize: '1.2rem'
+      <Typography variant="body1" align="center" sx={{
+        fontWeight: 300,
+        fontSize: '1rem'
       }}>
         Designed and Developed by Kimita
       </Typography>
-      <Typography variant="h6" component='div' align="center" sx={{
-        fontWeight: 500,
-        fontSize: '1.2rem'
+      <Typography variant="body1" component='div' align="center" sx={{
+        fontWeight: 300,
+        fontSize: '1rem'
       }}>
         Copyright &copy; {new Date().getFullYear()} {" "}
-        <Typography variant="h6" component='span' color="secondary" sx={{
-          fontWeight: 500,
-          fontSize: '1.2rem'
+        <Typography variant="body1" component='span' color="secondary" sx={{
+          fontWeight: 300,
+          fontSize: '1rem'
         }}>
           KW
         </Typography>
