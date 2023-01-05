@@ -2,7 +2,7 @@ import React from 'react';
 
 import HeroSection from './About/AboutHero';
 import Skills from './About/Skills';
-
+import GithubHeat from './About/GithubHeat';
 
 const About: React.FC = () => {
     
@@ -10,6 +10,7 @@ const About: React.FC = () => {
         <>
             <HeroSection />
             <Skills />
+            <GithubHeat />
         </>
     )
 }
