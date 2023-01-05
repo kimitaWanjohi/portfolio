@@ -1,11 +1,13 @@
 import React from 'react';
 import HeroSection from './Home/HeroSection';
+import Introduction from './Home/Introduction';
 
-function Home() {
+const Home: React.FC =  () => {
 
   return (
     <>
       <HeroSection />
+      <Introduction />
     </>
   )
 }
