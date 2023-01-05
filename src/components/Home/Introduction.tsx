@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { styled, useTheme } from '@mui/material/styles';
 
-import AboutImage from '../../assets/about.png';
+import Avatar from '../../assets/avatar.svg';
 
 
 const Span = styled('span')(({ theme }) => ({
@@ -26,7 +26,7 @@ const Introduction: React.FC = () => {
         <>
             <Box sx={{
                 my: theme.spacing(4),
-                py: theme.spacing(2)
+                px: theme.spacing(4),
             }}>
                 <Grid container>
                     <Grid item xs={12} sm={4}>
@@ -34,9 +34,10 @@ const Introduction: React.FC = () => {
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
-                            height: '100%'
+                            height: '100%',
+                            px: theme.spacing(2)
                         }}>
-                            <img src={AboutImage} alt="About" style={{width: '100%', }} />
+                            <img src={Avatar} alt="About" style={{ maxWidth: '220px', height: 'auto', width: '100%'}} />
                         </Box>
                     </Grid>
                     <Grid item xs={12} sm={8}>
@@ -44,7 +45,8 @@ const Introduction: React.FC = () => {
                                 display: 'flex',
                                 justifyContent: 'center',
                                 alignItems: 'flex-start',
-                                height: '100%'
+                                height: '100%',
+                                px: theme.spacing(2)
                             }}
                         > 
                             <MbFont>

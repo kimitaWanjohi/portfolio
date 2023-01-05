@@ -16,7 +16,8 @@ const HeroSection: React.FC = () => {
     return (
         <Box sx={{
             height: {xs: 'auto', md: '100vh'},
-            mb: theme.spacing(4)
+            mb: theme.spacing(4),
+            px: theme.spacing(4)
         }}>
             <Grid container>
                 <Grid item xs={12} sm={7}>
