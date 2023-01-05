@@ -1,24 +1,83 @@
 import React from 'react';
+
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import { useTheme, styled } from '@mui/material/styles';
 
-const AboutHero: React.FC = () => {
+import AboutImg from '../../assets/about.png';
 
+const Span = styled('span')(({ theme }) => ({
+    color: theme.palette.secondary.main,
+}));
+
+const MbFont =  styled('div')(({ theme }) => ({
+    fontSize: '1.3rem',
+    fontWeight: '500',
+    [theme.breakpoints.down('sm')]: {
+        fontSize: '1rem'
+    }
+}));
+
+
+const HeroSection: React.FC = () => {
+
+    const theme = useTheme();
     return (
-        <>
-            <Box>
-                <Typography variant="h2" component="h2" color="secondary" gutterBottom>
-                    About Me
-                </Typography>
-                <Typography variant="h6" component="div" gutterBottom>
-                I am a Full-stack software engineer with a keen interest in designing elegant solutions to technical problems. <br />
-                I am skilled in problem-solving and can leverage full-stack knowledge and experience to build and scale user-centered software designs. <br />
-                I am a highly motivated self-starter and team player. <br />
-                Also,  I'm a quick learner and have a keen eye for detail. <br />
-                </Typography>
-            </Box>
-        </>
+        <Box sx={{
+            // minHeight: {xs: 'auto', md: '100vh'},
+            mb: theme.spacing(4),
+            px: theme.spacing(4),   
+            display: 'flex',
+            alignItems: 'center'
+        }}>
+            <Grid container>
+                <Grid item xs={12} sm={7}>
+                    <Box sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        alignItems: 'flex-start',
+                        height: '100%'
+                    }}>
+                        <Typography variant="h3" gutterBottom component="div" sx={{color: 'white'}}>
+                            Know Who I am.
+                        </Typography>
+                        <MbFont>
+                            <Typography sx={{ 
+                                fontSize: 'inherit',
+                                fontWeight: 'inherit'
+                            }} gutterBottom>
+                                I am <Span>Kimita Wanjohi</Span> a <Span>FullStack Software Engineer</Span> based in <Span>Kenya</Span>
+                            </Typography>
+                            <Typography sx={{ 
+                                fontSize: 'inherit',
+                                fontWeight: 'inherit'
+                            }} gutterBottom>
+                                I am fluent in languages like <Span>Typescript, Javascript and Python.</Span>
+                            </Typography>
+                            <Typography sx={{ 
+                                fontSize: 'inherit',
+                                fontWeight: 'inherit'
+                            }} gutterBottom>
+                                My main field of interest is the <Span>Web</Span>, but I also Indulge in <Span>AI & Machine Learning</Span>
+                            </Typography>
+                        </MbFont>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} sm={5}>
+                    <Box sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        height: '100%'
+                    }}>
+                        <img src={AboutImg} alt="Home Main" style={{width: '100%'}} />
+                    </Box>
+                </Grid>
+            </Grid>
+        </Box>
     )
 }
 
-export default AboutHero
+export default HeroSection

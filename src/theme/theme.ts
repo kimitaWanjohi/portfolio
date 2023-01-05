@@ -154,7 +154,7 @@ export const theme = createTheme({
     ],palette: {
         mode: 'dark',
         background: {
-            default: '#14141b',
+            default: '#1a1328',
             paper: '#0b0f19'
         },
         action: {
