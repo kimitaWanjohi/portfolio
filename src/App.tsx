@@ -1,9 +1,12 @@
 import {lazy, Suspense} from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
+import Loading from './components/Layout/Loading';
+
 
 const Home: React.FC = lazy(() => import('./components/Home'));
 const About: React.FC = lazy(() => import('./components/About'));
+const Projects: React.FC = lazy(() => import('./components/Projects'));
 
 function App() {
 
@@ -12,10 +15,11 @@ function App() {
       <div className='background__overlay'>
       <Router>
         <Layout>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Loading />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
             </Routes>
           </Suspense>
         </Layout>
