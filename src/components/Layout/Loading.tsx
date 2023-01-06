@@ -8,7 +8,7 @@ const Loading: React.FC = () => {
     return (
         <>
             <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', mt: 10, minHeight: '60vh'}}>
-                <RiseLoader color={'#C770F0'} loading={true} size={40} />
+                <RiseLoader color={'#C770F0'} loading={true} size={20} />
             </Box>
         </>
     )
