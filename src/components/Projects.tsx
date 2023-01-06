@@ -2,8 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
-import Project from './Projects/Project';
-
+import ProjectsWrapper from './Projects/ProjectsWrapper';
 
 const Span = styled('span')(({ theme }) => ({
     color: theme.palette.primary.main,
@@ -26,7 +25,7 @@ const Projects: React.FC = () => {
                 </Typography>
 
                 <Box>
-
+                    <ProjectsWrapper />
                 </Box>
             </Box>
         </>

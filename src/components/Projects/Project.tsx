@@ -11,7 +11,7 @@ const Project: React.FC = () => {
     return (
     <Card sx={{ maxWidth: 900, display: 'flex'}}>
     <   CardMedia
-          sx={{ height: 'auto', width: '300%'}}
+          sx={{ height: 'auto', width: '100%'}}
           image="https://mui.com/static/images/cards/contemplative-reptile.jpg"
           title="green iguana"
         />

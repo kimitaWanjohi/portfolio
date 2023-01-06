@@ -5,12 +5,12 @@ import Project from './Project';
 const ProjectsWrapper: React.FC = () => {
   return (
     <>
-    <Project />
-    <Project />
-    <Project />
-    <Project />
-    <Project />
-    <Project />
+        <Project />
+        <Project />
+        <Project />
+        <Project />
+        <Project />
+        <Project />
     </>
   )
 }
