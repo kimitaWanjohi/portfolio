@@ -11,21 +11,21 @@ const Projects: React.FC = lazy(() => import('./components/Projects'));
 function App() {
 
   return (
-    <div className='background'>
-      <div className='background__overlay'>
-      <Router>
-        <Layout>
-          <Suspense fallback={<Loading />}>
+  <Router>
+    <Suspense fallback={<Loading />}>
+      <div className='background'>
+        <div className='background__overlay'>
+          <Layout>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
             </Routes>
-          </Suspense>
-        </Layout>
-      </Router>
+          </Layout>
+        </div>  
       </div>
-    </div>
+    </Suspense>
+  </Router>
   )
 }
 
