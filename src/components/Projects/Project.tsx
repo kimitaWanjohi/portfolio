@@ -5,31 +5,33 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import CardActions from '@mui/material/CardActions';
+import ProjectInterface from './model';
 
-const Project: React.FC = () => {
+interface ProjectProps {
+    project: ProjectInterface;
+}
 
+const Project: React.FC<ProjectProps> = ({ project }) => {
+    
     return (
-    <Card sx={{ maxWidth: 900, display: 'flex'}}>
+    <Card sx={{ display: 'flex', flexDirection: {xs: 'column', md:'row'}}}>
     <   CardMedia
-          sx={{ height: 'auto', width: '100%'}}
-          image="https://mui.com/static/images/cards/contemplative-reptile.jpg"
-          title="green iguana"
+          sx={{ height: {xs: 140, md: 'auto'}, width: {xs: undefined, md: '50%'} }}
+          image={project.image}
+          title={project.title}
         />
         <div>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
+            {project.title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-                      Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {project.description}
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Share</Button>
-          <Button size="small">Learn More</Button>
+          <Button size="small" href={project.visit}>Visit</Button>
+          <Button size="small" href={project.source}>Learn More</Button>
         </CardActions>
         </div>
     </Card>
