@@ -9,7 +9,6 @@ const Span = styled('span')(({ theme }) => ({
 }));
 
 const GithubHeat: React.FC = () => {
-    const [loading, setLoading] = React.useState(true);
   return (
     <>
         <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', mt: 10}}>
@@ -17,7 +16,7 @@ const GithubHeat: React.FC = () => {
                 Github <Span>Contribution Graph</Span>
             </Typography>
             <Box sx={{width: '100%', height: 'auto', mt: 5, display: 'flex', justifyContent: 'center'}}>
-                {<ReactGithubCalendar loading={loading}  username="kimitawanjohi"/>}
+                {<ReactGithubCalendar color={"#C770F0"}  username="kimitawanjohi"/>}
             </Box>
         </Box>
     </>
