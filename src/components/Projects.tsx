@@ -12,7 +12,7 @@ const Span = styled('span')(({ theme }) => ({
 const demoProjects: ProjectInterface[]  = [
     {
       title: 'Project 1',
-      description: 'This is a demo project',
+      description: 'This is a demo project lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
       image: 'https://source.unsplash.com/random',
       tags: ['React', 'Next.js', 'Material-UI'],
       source: 'https://github.com',
@@ -21,7 +21,7 @@ const demoProjects: ProjectInterface[]  = [
     },
     {
       title: 'Project 2',
-      description: 'This is a demo project',
+      description: 'This is a demo project lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
       image: 'https://source.unsplash.com/random',
       tags: ['React', 'Next.js', 'Material-UI'],
       source: 'https://github.com',
@@ -30,7 +30,7 @@ const demoProjects: ProjectInterface[]  = [
     },
     {
       title: 'Project 3',
-      description: 'This is a demo project',
+      description: 'This is a demo project lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
       image: 'https://source.unsplash.com/random',
       tags: ['React', 'Next.js', 'Material-UI'],
       source: 'https://github.com',
@@ -43,26 +43,18 @@ const demoProjects: ProjectInterface[]  = [
 const Projects: React.FC = () => {
 
     return (
-        <>
-            <Box sx={{ 
-                my: 10,
-                px: 10,
-                minHeight: '50vh',
+        <Box sx={{
+            my: 10,
+            px: 4,
+        }}>
+            <Typography variant="h4" align="center" component="h2" gutterBottom>
+                Here Some Of My <Span> Projects </Span>
+            </Typography>
 
-            }}>
-                <Typography variant="h4" align="center" component="h2" gutterBottom>
-                    Here Some Of My <Span> Projects </Span>
-                </Typography>
 
-                <Box sx={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                }} >
-                    <ProjectsWrapper projects={demoProjects} />
-                </Box>
-            </Box>
-        </>
+            <ProjectsWrapper projects={demoProjects} />
+
+        </Box>
 
     )
 }
