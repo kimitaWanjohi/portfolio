@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import ProjectsWrapper from './Projects/ProjectsWrapper';
 import ProjectInterface from './Projects/model';
-import { }
+import { client, urlFor } from  '../sanity/client';
 
 
 const Span = styled('span')(({ theme }) => ({
@@ -13,6 +13,15 @@ const Span = styled('span')(({ theme }) => ({
 
 
 const Projects: React.FC = () => {
+    const [projects, setProjects] = useState<ProjectInterface[]>([]);
+
+    console.log(import.meta.env.VITE_SANITY_API_VERSION)
+
+    useEffect(() => {
+        const query = '*[_type == "project"]';
+        const params = {};
+        client.fetch(query, params).then((data) => console.log(data));
+    }, []);
 
     return (
         <Box sx={{
@@ -24,7 +33,7 @@ const Projects: React.FC = () => {
             </Typography>
 
 
-            <ProjectsWrapper projects={demoProjects} />
+            <ProjectsWrapper projects={projects} />
 
         </Box>
 
