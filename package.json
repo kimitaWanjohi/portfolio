@@ -13,6 +13,8 @@
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.3",
+    "@sanity/client": "^4.0.1",
+    "@sanity/image-url": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-github-calendar": "^3.4.0",
