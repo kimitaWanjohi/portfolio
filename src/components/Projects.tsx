@@ -15,8 +15,6 @@ const Span = styled('span')(({ theme }) => ({
 const Projects: React.FC = () => {
     const [projects, setProjects] = useState<ProjectInterface[]>([]);
 
-    console.log(import.meta.env.VITE_SANITY_API_VERSION)
-
     useEffect(() => {
         const query = '*[_type == "project"]';
         const params = {};

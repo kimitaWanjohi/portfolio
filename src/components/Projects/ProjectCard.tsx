@@ -46,7 +46,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         component="img"
         alt={project.title}
         height="160"
-        image={urlFor(project.mainImage).url()}
+        image={urlFor(project.image).url()}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
