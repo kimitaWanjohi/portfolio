@@ -9,6 +9,8 @@ import Typography from '@mui/material/Typography';
 
 import { styled } from '@mui/material/styles';
 
+import { urlFor } from '../../sanity/client';
+
 import ProjectInterface from './model';
 
 
@@ -44,7 +46,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         component="img"
         alt={project.title}
         height="160"
-        image={project.image}
+        image={urlFor(project.mainImage).url()}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
