@@ -3,7 +3,7 @@ export default interface ProjectInterface {
     description: string;
     image: string;
     tags: string[];
-    source: string;
-    visit: string;
+    source: string | null;
+    visit: string | null;
     id: number;
 }
