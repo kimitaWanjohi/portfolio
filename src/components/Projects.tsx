@@ -6,7 +6,7 @@ import ProjectsWrapper from './Projects/ProjectsWrapper';
 import ProjectInterface from './Projects/model';
 
 const Span = styled('span')(({ theme }) => ({
-    color: theme.palette.primary.main,
+    color: theme.palette.secondary.main,
 }));
 
 const demoProjects: ProjectInterface[]  = [
