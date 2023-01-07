@@ -20,7 +20,7 @@ const Projects: React.FC = () => {
     useEffect(() => {
         const query = '*[_type == "project"]';
         const params = {};
-        client.fetch(query, params).then((data) => console.log(data));
+        client.fetch(query, params).then((data) => setProjects(data));
     }, []);
 
     return (
