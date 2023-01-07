@@ -14,13 +14,13 @@ export default {
             type: 'text'
         },
         {
-            name: 'link',
-            title: 'Link',
+            name: 'visit',
+            title: 'Visit',
             type: 'url'
         },
         {
-            name: 'github_link',
-            title: 'GithubLink',
+            name: 'source',
+            title: 'Source',
             type: 'url'
         },
         { 
