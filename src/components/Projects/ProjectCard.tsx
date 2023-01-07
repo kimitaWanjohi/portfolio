@@ -21,6 +21,20 @@ const CardLink = styled('a')(({ theme }) => ({
   color: theme.palette.text.primary,
 }));
 
+const CardTags = styled('div')(({ theme }) => ({
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: theme.spacing(1),
+  marginTop: theme.spacing(1),
+}));
+
+const CardTag = styled('span')(({ theme }) => ({
+  padding: theme.spacing(0.5),
+  borderRadius: theme.spacing(0.5),
+  backgroundColor: theme.palette.secondary.dark,
+  color: theme.palette.primary.contrastText,
+}));
+
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
@@ -39,6 +53,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <Typography variant="body2" color="text.secondary">
           {project.description}
         </Typography>
+        <CardTags>
+          {project.tags.map((tag) => (
+            <CardTag key={tag}>{tag}</CardTag>
+          ))}
+        </CardTags>
       </CardContent>
       <CardActions>
         { project.source && <CardLink href={project.source} target="_blank" rel="noopener noreferrer">
