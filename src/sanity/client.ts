@@ -10,4 +10,8 @@ export const client = sanityClient({
     apiVersion: import.meta.env.VITE_SANITY_API_VERSION,
 });
 
-export const builder = imageUrlBuilder(client);
+const builder = imageUrlBuilder(client);
+
+export function urlFor(source: any): any {
+    return builder.image(source);
+}
