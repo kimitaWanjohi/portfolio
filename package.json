@@ -20,7 +20,8 @@
     "react-github-calendar": "^3.4.0",
     "react-router-dom": "^6.6.1",
     "react-spinners": "^0.13.7",
-    "react-type-animation": "^2.1.2"
+    "react-type-animation": "^2.1.2",
+    "react-vertical-timeline-component": "^3.6.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

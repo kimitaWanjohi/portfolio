@@ -29,10 +29,7 @@ const Projects: React.FC = () => {
             <Typography variant="h4" align="center" component="h2" gutterBottom>
                 Here Some Of My <Span> Projects </Span>
             </Typography>
-
-
             <ProjectsWrapper projects={projects} />
-
         </Box>
 
     )
