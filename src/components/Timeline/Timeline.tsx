@@ -9,13 +9,13 @@ import {ExperienceInterface, EducationInterface} from '../About/model';
 
 
 interface TimeLineProps {
-    isFor: 'education' | 'experience'
+    isFor: 'education' | 'experience';
     data: EducationInterface[] | ExperienceInterface[];
 }
 
 type Position = 'left' | 'right' | 'alternate';
 
-const TimeLine: React.FC<TimeLineProps> = ({data}) =>  {
+const TimeLine: React.FC<TimeLineProps> = ({ isFor, data}) =>  {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const position = ((): Position => isMobile? 'right' : 'alternate')();
@@ -25,7 +25,7 @@ const TimeLine: React.FC<TimeLineProps> = ({data}) =>  {
             {
                 data.map((item, index) => {
                     return (
-                        <TimelineCardItem key={index} />
+                     <TimelineCardItem isFor={isFor} key={index} item={item as ExperienceInterface} />
                     )
                 })
             }
