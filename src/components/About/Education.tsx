@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 
-import TimeLineWrapper from '../Timeline/TimeLineWrapper';
+import TimeLine from '../Timeline/Timeline';
 
 const Span = styled('span')(({theme}) => ({
     color: theme.palette.secondary.main,
@@ -39,7 +39,7 @@ const Education: React.FC = () => {
                 My <Span> Education </Span>Background
             </Typography>
 
-            <TimeLineWrapper isFor={"education"} data={demoEducation} /> 
+            <TimeLine isFor={"education"} data={demoEducation} /> 
         </Box>
     )
 }
