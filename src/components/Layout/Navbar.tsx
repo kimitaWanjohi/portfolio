@@ -35,6 +35,9 @@ const NavLink = styled(Button)(({ theme }) => ({
     backgroundColor: 'transparent',
     color: theme.palette.text.primary,
     fontWeight: 400,
+    display: 'flex',
+    justifyContent: 'end',
+    alignContent: 'center',
     fontSize: '1.25rem',
     '&:hover': {
         borderBottom: `3px solid ${theme.palette.secondary.main}`,
@@ -49,6 +52,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
     background: theme.palette.background.paper,
     ...theme.mixins.toolbar,
     justifyContent: 'flex-end',
+    zIndex: theme.zIndex.appBar - 1
 }));
 
 const Navbar: React.FC = () => {
@@ -110,9 +114,23 @@ const Navbar: React.FC = () => {
                 sx={{
                     backdropFilter:"blur(7px)",
                     background:'rgba(0, 0, 0, 0.5)',
+                    zIndex: theme.zIndex.appBar - 1,
                 }}
             >
-                <DrawerHeader/>
+                <DrawerHeader>
+                    <IconButton
+                        size="large"
+                        sx={{ display: { xs: 'block', sm: 'none' } }}
+                        aria-label="open drawer"
+                        edge="start"
+                        color="secondary"
+                        onClick={() => setOpen(!open)}
+                    >
+                        {
+                            open ? <CloseIcon /> : <MenuIcon />
+                        }
+                    </IconButton>
+                </DrawerHeader>
                 <Box sx={{ 
                     display: 'flex', 
                     flexDirection: 'column', 
