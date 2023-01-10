@@ -4,6 +4,7 @@ import HeroSection from './About/AboutHero';
 import Experience from './About/Experience';
 import Skills from './About/Skills';
 import GithubHeat from './About/GithubHeat';
+import Education from './About/Education';
 
 const About: React.FC = () => {
     
@@ -11,6 +12,7 @@ const About: React.FC = () => {
         <>
             <HeroSection />
             <Experience />
+            <Education />
             <Skills />
             <GithubHeat />
         </>
