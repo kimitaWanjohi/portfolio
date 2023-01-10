@@ -1,5 +1,4 @@
 export interface EducationInterface {
-    id: number;
     school: string;
     degree: string;
     date: string;
@@ -7,7 +6,6 @@ export interface EducationInterface {
 }
 
 export interface ExperienceInterface {
-    id: number;
     company: string;
     position: string;
     date: string;
