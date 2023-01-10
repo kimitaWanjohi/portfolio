@@ -12,7 +12,7 @@ const GithubHeat: React.FC = () => {
   return (
     <>
         <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', mt: 10}}>
-            <Typography variant="h4" gutterBottom component="div">
+            <Typography variant="h4" align="center" gutterBottom component="div">
                 Github <Span>Contribution Graph</Span>
             </Typography>
             <Box sx={{width: '100%', height: 'auto', mt: 5, display: 'flex', justifyContent: 'center'}}>

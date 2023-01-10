@@ -85,20 +85,20 @@ const Skills: React.FC = () => {
     const theme = useTheme();
     return (
         <>
-            <Box sx={{ px: theme.spacing(2) }}>
+            <Box>
                 <Typography variant="h4" align="center" color="text.primary" >
                     Professional <Span>Skillset</Span>
                 </Typography>
                 <Grid container spacing={3}>
                     {skills.map((skill, index) => (
-                        <Grid item key={index}>
+                        <Grid item xs={6} sm={4} md={2} key={index}>
                             <Tooltip title={skill.name} placement="top">
                                 <SkillItem>
                                     <img src={skill.icon} alt={skill.name} />
                                 </SkillItem>
                             </Tooltip>
                         </Grid>
-                    ))}
+                    ))} 
                 </Grid>
             </Box>
         </>
