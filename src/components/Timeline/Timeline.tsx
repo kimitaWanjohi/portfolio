@@ -14,13 +14,15 @@ import HotelIcon from '@mui/icons-material/Hotel';
 import RepeatIcon from '@mui/icons-material/Repeat';
 
 import Typography from '@mui/material/Typography';
-import { useTheme } from '@mui/material/styles';
+
+import {ExperienceInterface, EducationInterface} from '../About/model';
 
 interface TimeLineProps {
     position: 'left' | 'alternate' | 'right';
+    data: EducationInterface[] | ExperienceInterface[];
 }
 
-const TimeLine: React.FC<TimeLineProps> = ({position}) =>  {
+const TimeLine: React.FC<TimeLineProps> = ({position, data}) =>  {
 
     return (
     <Timeline position={position}>

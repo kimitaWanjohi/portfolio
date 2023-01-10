@@ -1,4 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
+
+import { EducationInterface, ExperienceInterface } from '../About/model';
 
 import TimeLine from './Timeline';
 
@@ -8,14 +10,23 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 type Position = 'left' | 'alternate' | 'right';
 
-const TimeLineWrapper: React.FC = () => {
+
+interface TimeLineWrapperProps {
+    isFor: 'education' | 'experience';
+    data: EducationInterface[] | ExperienceInterface[];
+}
+    
+
+const TimeLineWrapper: React.FC<TimeLineWrapperProps> = ({isFor, data}) => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const position = ((): Position => isMobile? 'right' : 'alternate')();
     
     return (
         <>
-            <TimeLine position={position} />
+            {
+                isFor === 'education'? <TimeLine position={position} data={data as EducationInterface[]} /> : <TimeLine position={position} data={data as ExperienceInterface[]} />
+            }
         </>
     )
 };
