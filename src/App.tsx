@@ -8,6 +8,8 @@ const Home: React.FC = lazy(() => import('./components/Home'));
 const About: React.FC = lazy(() => import('./components/About'));
 const Projects: React.FC = lazy(() => import('./components/Projects'));
 
+//TODO add nprogress loader
+
 function App() {
 
   return (
