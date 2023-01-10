@@ -15,7 +15,7 @@ const Education: React.FC = () => {
             mx: 8,
             my: 8
         }}>
-            <Typography variant="h4" gutterBottom>
+            <Typography variant="h4" align="center" gutterBottom>
                 My <Span> Education </Span>Background
             </Typography>
             
