@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 
-import Timeline from '../Timeline/Timeline';
+import TimeLineWrapper from '../Timeline/TimeLineWrapper';
 
 const Span = styled('span')(({ theme }) => ({
     color: theme.palette.secondary.main,
@@ -22,7 +22,7 @@ const Experience: React.FC = () => {
             <Typography variant="h4" align="center" gutterBottom>
                 My Work <Span>Experience</Span>
             </Typography>
-            <Timeline />
+            <TimeLineWrapper />
         </Box>
     );
 };

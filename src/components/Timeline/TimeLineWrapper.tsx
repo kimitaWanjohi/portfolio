@@ -4,9 +4,9 @@ import TimeLine from './Timeline';
 
 const TimeLineWrapper: React.FC = () => {
 
-    const getTimelinePosition = ((): any => {
+    const getTimelinePosition = ((): "left" | "right" | "alternate" => {
         if (window.innerWidth < 600) {
-            return 'left';
+            return 'right';
         } else {
             return 'alternate';
         }
@@ -14,7 +14,6 @@ const TimeLineWrapper: React.FC = () => {
 
     return (
         <>
-            <div>{getTimelinePosition}</div>
             <TimeLine position={getTimelinePosition} />
         </>
     )

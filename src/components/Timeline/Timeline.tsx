@@ -17,7 +17,7 @@ import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 
 interface TimeLineProps {
-    position: 'left' | 'alternate';
+    position: 'left' | 'alternate' | 'right';
 }
 
 const TimeLine: React.FC<TimeLineProps> = ({position}) =>  {
