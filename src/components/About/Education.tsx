@@ -16,14 +16,14 @@ const demoEducation = [
         id: 1,
         school: 'University of California, Irvine',
         degree: 'B.S. Computer Science',
-        year: '2018 - 2022',
+        date: '2018 - 2022',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
     },
     {
         id: 2,
         school: 'University of California, Irvine',
         degree: 'B.S. Computer Science',
-        year: '2018 - 2022',
+        date: '2018 - 2022',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
     }
 ]
