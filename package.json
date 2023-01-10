@@ -17,6 +17,7 @@
     "@sanity/client": "^4.0.1",
     "@sanity/image-url": "^1.0.1",
     "react": "^18.2.0",
+    "react-content-loader": "^6.2.0",
     "react-dom": "^18.2.0",
     "react-github-calendar": "^3.4.0",
     "react-router-dom": "^6.6.1",
