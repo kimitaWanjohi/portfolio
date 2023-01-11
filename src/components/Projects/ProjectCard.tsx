@@ -41,7 +41,7 @@ const CardTag = styled('span')(({ theme }) => ({
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, height: 'fit-content !important' }}>
       <CardMedia
         component="img"
         alt={project.title}
