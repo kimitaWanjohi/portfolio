@@ -16,6 +16,7 @@
     "@mui/material": "^5.11.3",
     "@sanity/client": "^4.0.1",
     "@sanity/image-url": "^1.0.1",
+    "@types/nprogress": "^0.2.0",
     "nprogress": "^0.2.0",
     "react": "^18.2.0",
     "react-content-loader": "^6.2.0",
