@@ -7,6 +7,7 @@ import Loading from './components/Layout/Loading';
 const Home: React.FC = lazy(() => import('./components/Home'));
 const About: React.FC = lazy(() => import('./components/About'));
 const Projects: React.FC = lazy(() => import('./components/Projects'));
+const Blogs: React.FC = lazy(() => import('./components/Blogs'));
 
 //TODO add nprogress loader
 
@@ -22,6 +23,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/blogs" element={<Blogs />} />
             </Routes>
           </Layout>
         </div>  

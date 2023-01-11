@@ -89,7 +89,7 @@ const Navbar: React.FC = () => {
                     <NavLink size="large" variant="text" onClick={() => navigate('/')} startIcon={<HomeOutlinedIcon />}>Home</NavLink>
                     <NavLink size="large" variant="text" onClick={() => navigate('/about')} startIcon={<PersonOutlinedIcon />}>About</NavLink>
                     <NavLink size="large" variant="text" onClick={() => navigate('/projects')} startIcon={<MonitorOutlinedIcon />}>Project</NavLink>
-                    <NavLink size="large" variant="text" onClick={() => navigate('/resume')} startIcon={<FeedOutlinedIcon />}>Resume</NavLink>
+                    <NavLink size="large" variant="text" onClick={() => navigate('/blogs')} startIcon={<FeedOutlinedIcon />}>Blogs</NavLink>
                 </NavLinks>
 
                 <IconButton
@@ -142,7 +142,7 @@ const Navbar: React.FC = () => {
                     <NavLink size="large" variant="text" onClick={() => {navigate('/'); setOpen(false);}} startIcon={<HomeOutlinedIcon />}>Home</NavLink>
                     <NavLink size="large" variant="text" onClick={() => {navigate('/about'); setOpen(false);}} startIcon={<PersonOutlinedIcon />}>About</NavLink>
                     <NavLink size="large" variant="text" onClick={() => {navigate('/projects'); setOpen(false);}} startIcon={<MonitorOutlinedIcon />}>Project</NavLink>
-                    <NavLink size="large" variant="text" onClick={() => {navigate('/resume'); setOpen(false);}} startIcon={<FeedOutlinedIcon />}>Resume</NavLink>
+                    <NavLink size="large" variant="text" onClick={() => {navigate('/blogs'); setOpen(false);}} startIcon={<FeedOutlinedIcon />}>Blogs</NavLink>
                 </Box>
             </Drawer>
         </AppBar>
