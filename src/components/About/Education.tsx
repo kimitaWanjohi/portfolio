@@ -4,6 +4,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 
+import { PropagateLoader } from 'react-spinners';
+
 import {EducationInterface} from './model';
 import TimeLine from '../Timeline/Timeline';
 import { client } from '../../sanity/client';
@@ -12,6 +14,12 @@ const Span = styled('span')(({theme}) => ({
     color: theme.palette.secondary.main,
 }))
 
+const Loading = styled('div')(({ theme }) => ({
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '50vh',
+}));
 
 const Education: React.FC = () => {
     const [education, setEducation] = useState<EducationInterface[]>([]);
@@ -34,9 +42,13 @@ const Education: React.FC = () => {
             <Typography variant="h4" align="center" gutterBottom>
                 My <Span> Education </Span>Background
             </Typography>
-
-            <TimeLine isFor={"education"} data={education
-            } /> 
+            {
+                loading?
+                <Loading>
+                    <PropagateLoader color={'#C770F0'} loading={true} size={20}  />
+                </Loading>:
+                <TimeLine isFor={"education"} data={education} />
+            }
         </Box>
     )
 }
