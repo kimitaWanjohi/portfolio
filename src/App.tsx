@@ -1,5 +1,9 @@
-import {lazy, Suspense} from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {lazy, Suspense, useEffect} from 'react';
+
+import { Route, Routes, useLocation } from 'react-router-dom';
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
+
 import Layout from './components/Layout/Layout';
 import Loading from './components/Layout/Loading';
 
@@ -9,12 +13,17 @@ const About: React.FC = lazy(() => import('./components/About'));
 const Projects: React.FC = lazy(() => import('./components/Projects'));
 const Blogs: React.FC = lazy(() => import('./components/Blogs'));
 
-//TODO add nprogress loader
 
 function App() {
+  const pathname = useLocation().pathname;
+
+  useEffect(() => {
+    NProgress.configure({ showSpinner: false });
+    NProgress.start();
+    NProgress.done();
+  }, [pathname]);
 
   return (
-  <Router>
     <Suspense fallback={<Loading />}>
       <div className='background'>
         <div className='background__overlay'>
@@ -29,7 +38,6 @@ function App() {
         </div>  
       </div>
     </Suspense>
-  </Router>
   )
 }
 
