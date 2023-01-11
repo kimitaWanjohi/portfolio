@@ -1,24 +1,39 @@
 import React, {useEffect, useState} from 'react';
+
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
+
+import { PropagateLoader } from 'react-spinners';
 import ProjectsWrapper from './Projects/ProjectsWrapper';
+
 import ProjectInterface from './Projects/model';
-import { client, urlFor } from  '../sanity/client';
+import { client } from  '../sanity/client';
 
 
 const Span = styled('span')(({ theme }) => ({
     color: theme.palette.secondary.main,
 }));
 
+const Loading = styled('div')(({ theme }) => ({
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '50vh',
+}));
+
 
 const Projects: React.FC = () => {
     const [projects, setProjects] = useState<ProjectInterface[]>([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const query = '*[_type == "project"]';
         const params = {};
-        client.fetch(query, params).then((data) => setProjects(data));
+        client.fetch(query, params).then((data) => {
+            setLoading(false);
+            setProjects(data);
+        });
     }, []);
 
     return (
@@ -29,7 +44,11 @@ const Projects: React.FC = () => {
             <Typography variant="h4" align="center" component="h2" gutterBottom>
                 Here Some Of My <Span> Projects </Span>
             </Typography>
-            <ProjectsWrapper projects={projects} />
+            { loading ? 
+            <Loading>
+                <PropagateLoader color={'#C770F0'} loading={true} size={20}  />
+            </Loading>
+            :<ProjectsWrapper projects={projects}/> }
         </Box>
 
     )
