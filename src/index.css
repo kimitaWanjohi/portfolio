@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background{
+  font-family: 'Roboto', sans-serif;
+  background-size: cover !important;                     
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(./assets/home-bg.jpg);
+}
+
+.background__overlay{
+  backdrop-filter: blur(5px);
+  background-size: cover !important;                     
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: linear-gradient( 45deg,hsla(0,3%,6%,.9),rgba(12,10,22,.8));
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+  ::-webkit-scrollbar-track {
+  background: #c770f000; 
+}
+  ::-webkit-scrollbar-thumb {
+  background:#C770F0; 
+    border-radius:3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  
+  background: #c770f0c3; 
+} 
+
+#nprogress .bar {
+  background: #C770F0;
+
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+}
